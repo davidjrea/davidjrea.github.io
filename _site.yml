@@ -8,8 +8,8 @@ navbar:
       href:  CV_20190823.pdf
   right:
     - icon: fa-envelope fa-lg
-      href: contact.html
+      href: "mailto:readj@mail.uc.edu"
 output:
   html_document:
-    theme: paper
+    theme: journal
     css: 'styles.css'
