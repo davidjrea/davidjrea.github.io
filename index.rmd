@@ -1,5 +1,4 @@
 ---
-title: "My Website"
+title: "David J. Rea"
 ---
     
-Hello, Website! Welcome to the world.
