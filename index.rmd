@@ -1,4 +1,10 @@
 ---
-title: "David J. Rea"
 ---
     
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+<img src="images/Rea, David 5.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
+
+I am a PhD Candidate in the Lindner College of Busienss at the University of Cincinnati
+
+In my research, I study human-induced variability in service systems. I seek data-driven interventions which mitigate the negative consequences of this variability. To date, I have focused on two scenarios: (1) fair task allocation under variable employee preferences, and (2) real-time analytics for accommodating variation in the timing of customer demand. My interest in these topics is derived from the potential benefits to the individual well-being of both employees and customers. 
