@@ -2,3 +2,13 @@
 .Rhistory
 .RData
 .Ruserdata
+
+*.aux
+
+*.log
+
+*.out
+
+*.pdf
+
+CV_20200810_jobMarket.synctex.gz

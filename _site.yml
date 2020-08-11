@@ -5,7 +5,7 @@ navbar:
   type: inverse
   left:
     - text: "CV"
-      href:  CV_20190823.pdf
+      href:  CV_20200810_jobMarket.pdf
   right:
     - icon: fa-envelope fa-lg
       href: "mailto:readj@mail.uc.edu"
