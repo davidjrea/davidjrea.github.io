@@ -1,10 +1,46 @@
 ---
 ---
-    
 <link rel="stylesheet" href="styles.css" type="text/css">
 
-<img src="images/Rea, David 5.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
 
-I am a PhD Candidate in the Lindner College of Busienss at the University of Cincinnati
+<div style="overflow-x:auto;">
+<table class="unstyledTable" style = "width:100%; align:center" >
+<tbody>
+<tr>
+  <td style="align:left">
+    <img src="images/Rea, David 5.jpg" style="width:40%; border:10px    solid; margin-right: 40px" align="left">
+    <text style="align:right; font-size:20px">
+    <p>
+    I study human-induced variability and uncertainty in service systems. I
+seek data-driven interventions which mitigate the resulting stress on systems. 
+    </p>
+    <p>  
+I have focused primarily on problems in healthcare and humanitarian operations and food distribution. My interest in these topics is derived from the beneﬁts to individual well-being.
+    </p>
+    <p>  
+<center><strong>Upcoming Presentations</strong></center>
 
-In my research, I study human-induced variability in service systems. I seek data-driven interventions which mitigate the negative consequences of this variability. To date, I have focused on two scenarios: (1) fair task allocation under variable employee preferences, and (2) real-time analytics for accommodating variation in the timing of customer demand. My interest in these topics is derived from the potential benefits to the individual well-being of both employees and customers. 
+  <ul>
+    <li>"Designing Fair Allocation Algorithms for Healthcare Gig Work"</br> 
+    Decision Sciences Institute Annual Meeting (Virutal) </br>
+    TBD </li>
+    <li>"Adapting Emergency Department Operations In Real-Time"</br> 
+    INFORMS Annual Meeting (Virutal) </br>
+    TBD 
+    </li>
+  </ul>
+  </p>
+  </text>
+  </td>
+</tr>
+<tr>
+<td> <text style = "font-size = 16px">
+PhD Candidate, Operations & Business Analytics<br/> 
+  University of Cincinnati  <br/>
+  Lindner College of Business – OBAIS  <br/>
+  College of Medicine – Emergency Medicine <br/></td>
+</text>
+</tr>
+</tbody>
+</table>
+</div>

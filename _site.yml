@@ -1,12 +1,11 @@
-name: "David J. Rea"
+name: "David Rea"
 output_dir: "."
 navbar:
-  title: "David J. Rea"
+  title: "David Rea"
   type: inverse
   left:
     - text: "CV"
-      href:  CV_20200810_jobMarket.pdf
-  right:
+      href:  DavidRea_CV_20200810.pdf
     - icon: fa-envelope fa-lg
       href: "mailto:readj@mail.uc.edu"
 output:
