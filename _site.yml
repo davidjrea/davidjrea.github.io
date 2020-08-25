@@ -5,7 +5,7 @@ navbar:
   type: inverse
   left:
     - text: "CV"
-      href:  DavidRea_CV_20200810.pdf
+      href:  DavidRea_CV_20200825.pdf
     - icon: fa-envelope fa-lg
       href: "mailto:readj@mail.uc.edu"
 output:
