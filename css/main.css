@@ -142,17 +142,17 @@ blockquote footer {
 }
 
 #program {
-  color: gray;
-  text-align: left;
-}
-
-#college {
   color: #000000;
   text-align: left;
 }
 
+#college {
+  color: #474747;
+  text-align: left;
+}
+
 #department {
-  color: darkgray;
+  color: #707070;
   text-align: left;
 }
 
