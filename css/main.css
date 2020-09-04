@@ -6,8 +6,8 @@ body {
 }
 
 /* Colors */
-.dark-blue {
-  color: #20364c !important;
+.dark-red {
+  color: #E00122 !important;
 }
 
 #badge-more {
@@ -134,7 +134,7 @@ blockquote footer {
 
 /* Contact info area, index.html page ------------------------------------------------- */
 #title {
-  color: #20364c;
+  color: #000000;
   margin-top: 2rem;
   font-weight: 600;
   font-size: 1.4rem;
@@ -142,6 +142,16 @@ blockquote footer {
 }
 
 #program {
+  color: gray;
+  text-align: center;
+}
+
+#college {
+  color: darkgray;
+  text-align: center;
+}
+
+#department {
   color: gray;
   text-align: center;
 }
