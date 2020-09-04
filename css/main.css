@@ -143,17 +143,17 @@ blockquote footer {
 
 #program {
   color: gray;
-  text-align: center;
+  text-align: left;
 }
 
 #college {
   color: black;
-  text-align: center;
+  text-align: left;
 }
 
 #department {
-  color: gray;
-  text-align: center;
+  color: darkgray;
+  text-align: left;
 }
 
 iframe {
