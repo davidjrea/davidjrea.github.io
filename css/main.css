@@ -38,7 +38,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", Helvetica, sans-serif;
-  color: #20364c;
+  color: #000000;
   font-weight: 500;
 }
 
@@ -147,7 +147,7 @@ blockquote footer {
 }
 
 #college {
-  color: darkgray;
+  color: black;
   text-align: center;
 }
 
