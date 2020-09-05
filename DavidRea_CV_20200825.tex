@@ -1,0 +1,358 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Help with basic CV custimization
+
+%https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\documentclass[12pt, a4paper, sans]{moderncv}
+\documentclass[12pt, letter]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}        					   % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\usepackage{pdfpages/pdfpages}
+\usepackage{moderntimeline/moderntimeline}
+%%%%%%%%%%% REFERENE FOR MODERNTIMELINE 
+\tlmaxdates{2009}{2022}     
+%\tltext{\scriptsize\normalsize}
+\tltext{\scriptsize\small}
+\tltextend[west]{\scriptsize\small}
+\tltextstart[south east]{\scriptsize\small}
+
+
+% http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/moderntimeline/moderntimeline.pdf
+         % Beggining and start of your timeline  
+%\tltextstart[base]{\scriptsize}     % center labels on timeline?
+
+\usepackage{xpatch/xpatch}
+\usepackage{color, graphicx}
+%\usepackage{color, hyperref}
+\usepackage{enumerate}
+
+% adjust the page margins
+\usepackage[margin=.975in]{geometry}    % Width of the entire CV
+\setlength{\hintscolumnwidth}{1in}   % Width of the timeline on your left       
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+%%%%%%%%%% CUSTOMIZE SECTIONS AND SUBSECTIONS SIMPLIFIED HEADER %%%%%%%% 
+
+\renewcommand*{\sectionfont}{\normalsize\scshape\bfseries}
+\renewcommand*{\subsectionfont}{\normalsize\scshape\bfseries}
+
+% Get rid of automatic formatting
+\renewcommand*{\cventry}[7][.25em]{%
+	\cvitem[#1]{#2 }{%
+		{#3 }%
+		\ifthenelse{\equal{#4 }{}}{}{{#4 }}%
+		\ifthenelse{\equal{#5 }{}}{}{#5 }%
+		\ifthenelse{\equal{#6 }{}}{}{#6 }%
+  		\ifthenelse{\equal{#7 }{}}{}{#7 }%
+		%\strut%
+		%\ifx&#7&%
+		%\else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}
+	}}
+
+
+% personal data
+\name{David}{Rea}
+ 
+% https://gist.github.com/chrisma/c4eaa1753ba16ccba004
+\newcommand{\cvitemleft}[3][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+    \hintstyle{#2} &{#3}%
+  \end{tabular}%
+  \par\addvspace{#1}
+}
+
+\newcommand{\cventryleft}[7][.25em]{%
+  \cvitemleft[#1]{#2}{%
+  	{#3 }%
+  	\ifthenelse{\equal{#4 }{}}{}{{#4 }}%
+  	\ifthenelse{\equal{#5 }{}}{}{#5 }%
+  	\ifthenelse{\equal{#6 }{}}{}{#6 }%
+  	\ifthenelse{\equal{#7 }{}}{}{#7 }%
+  	%\strut%
+    %\ifx&#7&%
+  	%\else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}
+  }}
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+
+%%%%%%%%%% CUSTOM SIMPLIFIED HEADER %%%%%%%% 
+
+\newcommand{\simpleHeader}[4]{
+	\centerline{\Huge{#1}}
+	\centerline{Curriculum Vitae}
+		\smallskip
+	\centerline{\small#2  {\Large\textperiodcentered} \small#3}
+	\centerline{\small#4}
+}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\simpleHeader{\href{https://davidjrea.github.io}{David Rea}}{\emaillink{readj@mail.uc.edu}}{216-894-0434}{3493 Brookline Ave., Apt 3, Cincinnati, OH 45220}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{EDUCATION}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\smallskip
+\tltext{\scriptsize\small}
+\tltextend[west]{\scriptsize\small}
+\tltextstart[east]{\scriptsize\small}
+
+%\cvitemwithcomment{}{}{}
+%\tldatelabelcventry{2021}{$^*2021$\hspace{1mm} }{PhD, Business Administration,}{University of Cincinnati \newline}
+\tldatecventry{2021}{PhD, Business Administration,}{University of Cincinnati \newline}
+{\hspace*{.35in} \href{https://business.uc.edu/faculty-and-research/departments/obais.html}{Dept: Operations, Business Analytics, \& Information Systems}}{\newline \hspace*{.35in} Expected Graduation: May 2021}{}{}
+
+
+\tldatecventry{2015}{MS, }{Mathematical Sciences,}{Clemson University \newline}
+{\hspace*{.35in}\href{https://www.clemson.edu/science/departments/math-stat/}{ Dept: Mathematical Sciences}}{}{}
+
+%\tltextstart[south west]{\scriptsize\small}
+%\tldatelabelcventry{2012}{2012}{BA, }{Mathematics, Economics,}{Wittenberg University \newline }
+%{\hspace*{.35in} Dept: \href{https://www.wittenberg.edu/academics/math}{Mathematics}, \href{https://www.wittenberg.edu/academics/economics}{Economics}}{}{}{}
+
+\tldatecventry{2012}{BA, }{Mathematics, Economics,}{Wittenberg University \newline }
+{\hspace*{.35in} Dept: \href{https://www.wittenberg.edu/academics/math}{Mathematics}, \href{https://www.wittenberg.edu/academics/economics}{Economics}}{}{}{}
+
+\smallskip
+\section{RESEARCH AREA}
+\smallskip
+In my research, I study human-induced stochasticity in service systems. I develop data-driven interventions which mitigate the resulting stress on systems. Specifically, my focus has been placed on two broad issues in service systems$:$
+\smallskip 
+\begin{enumerate}[\hspace{0.5cm}(1)]
+	\item Fair task allocation under variable individual needs and preferences
+	\item Real-time analytics for accommodating uncertain customer demand. 
+\end{enumerate}
+\smallskip
+My active research falls under two primary contexts$:$ \textit {healthcare operations} and \textit{humanitarian operations}. The contributions to societal good motivate my interest in these topics. 
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PUBLICATIONS \& WORKING PAPERS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\smallskip
+\subsection{Manuscripts Under Review}
+\smallskip
+\textbf{Rea, David}, Craig Froehle, Suzanne Masterson, Brian Stettler, Greg Fermann, Arthur Pancioli, "When Equal Isn’t Fair: A Case Study of Service Employee Staffing," \textit{3rd Round Review at Production and Operations Management}.\\
+\smallskip 
+\textbf{Rea, David}, Leonardo Lozano, Craig Froehle,  "Algorithmic Justice: Embedding Fair Compensation in Task Allocation Models," \textit{Submitted to Management Science}
+\smallskip \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Manuscripts in Preparation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\smallskip 
+%
+\textbf{Rea, David}, Craig Froehle, "Real-time Analytics for On-demand Services: A Literature Review and Framework," \textit{Target: Production and Operations Management.}\\
+\smallskip
+Dixon, Mike, \textbf{David Rea}, Liana Victorino, Craig Froehle, "Perceived Justice and Fairness in Managing Waiting Lines," Book Chapter, \textit{Research Handbook on Services Management}
+\smallskip \\
+
+\subsection{Ongoing Research}
+\textbf{Rea, David}, Craig Froehle, "Before They Wait: Forecasting and Accommodating Demand Uncertainty in the Emergency Department," \textit{Dissertation Research}
+\smallskip \\
+Green, Brittany, \textbf{David Rea}, Charles Hoffman, Craig Froehle, Andrew Beck, Carely Riley, "Estimating the Hunger Gap", \textit{Hamilton County Food Distribution Working Group}
+\smallskip \\
+\textbf{Rea, David}, Brittany Green, Charles Hoffman, Craig Froehle, Andrew Beck, Carely Riley,: "Injection and Redistribution: Coordinating Efforts to Close the Hunger Gap", \textit{Hamilton County Food Insecurity  Working Group}
+\smallskip \\
+\textbf{Rea, David}, Rachel Ancova, Chet Zalesky, Curry Woods, Bob Doerning, Caroline Freiermuth, "Where are the overdoses? The effect of COVID-19 on Opioid Presentations in the ED"
+\smallskip \\
+\textbf{Rea, David}, Parastu Kasaie, Mike Ward, Rachel Ancova, Craig Froehle, David Kelton, Mike Lyons, "The value of HIV Screening in the Emergency Department" 
+
+\section{ACADEMIC SPEAKING}
+
+\smallskip
+\subsection{Invited Talks \& Panels}
+\smallskip
+%\tldatecventry{year}{"Title"}{Meeting,}{Location,}{Date}{}
+
+\tldatecventry{2020}{"Designing Fair Allocation Algorithms for Healthcare Gig Work,"}{Decision Sciences Institute Annual Meeting}{(Virtual),}{November.}{}
+
+\tldatecventry{2020}{"Adapting Emergency Department Operations In Real-Time,"}{INFORMS Annual Meeting}{(Virtual),}{November.}{}
+
+\tldatecventry{2019}{"Accommodation of Demand Surges in the Emergency Department via Proactive Staff-Planning,"}{INFORMS Annual Meeting,}{Seattle, WA,}{October.}{}
+
+\tldatecventry{2019}{"Coping with the Business Cycle as a Non-profit Organization"}{INFORMS Annual Meeting, Poster Session,}{Seattle, WA,}{October.}{}
+
+\tldatecventry{2019}{ "A Novel Approach to Fair Allocation of Physician Clinical Time Across Multiple Locations,"}{Society for Academic Emergency Medicine, Poster Session,}{Las Vegas, NV,}{May 16th.}{}{}
+
+\tldatecventry{2019}{"Managing Uncertainty via Distributional Demand Forecasting,"}{INFORMS Healthcare,}{Boston, MA,}{July 29th.}{}
+
+\tldatecventry{2019}{"Optimizing Fairness in a Multi-Site Emergency Department Staff Allocation Model,"}{INFORMS Healthcare,}{Boston, MA,}{July 27th.}{}
+
+\tldatecventry{2019}{"Ensuring Fairness in Physician Time Allocation: A Multi-Objective Optimization Approach,"}{POMS Annual Meeting,}{Washington, DC,}{May 4th.}{}{}
+
+\tldatecventry{2019}{"Probabilistic Forecasting for Online Staffing Decisions in the Emergency Department,"}{POMS Annual Meeting,}{Washington, DC,}{May 4th.}{}{}
+
+\tldatecventry{2018}{Panelist, "What to do with a Degree in Math?",}{Wittenberg University}{Springfield, OH,}{October 5th.}{}{}
+
+\tldatecventry{2018}{"Allocating Clinical Capacity to Maximize Staff Satisfaction,"}{POMS Annual Meeting,}{Houston, TX,}{May 4th.}{}
+
+\tldatecventry{2017}{"Improving Patient Transport Services through Crew Flexibility,"}{INFORMS Annual Meeting,}{Houston, TX,}{November}{October 22nd.}
+
+\tldatecventry{2017}{"Optimal Staffing, Scheduling and Dispatch Policies for Emergency Transport Services"}{POMS Annual Meeting,}{Seattle, WA,}{May 7th.}{}
+
+\tldatecventry{2017}{Presentation, "Health-care Analytics: Saving Lives and Lowering Costs,"}{Departmental Colloquium Series,}{Wittenberg University}{Springfield,  OH,}{April 3rd.}{}{}
+
+\smallskip
+\subsection{Other Speaking Engagements}
+\smallskip
+\tldatecventry{2020}{Presentation, "Who's Still Showing Up? Changes in Emergency Department Patient Population During the COVID-19 Pandemic,"}{Emergency Medicine Research Interest Group,}{University of Cincinnati}{Cincinnati, OH,}{July 9th.}{}{}
+
+\tldatecventry{2019}{Presentation, "Balancing Equity and Equality in the Allocation of Physician Clinical Time Across Multiple Emergency Department Facilities ,"}{Emergency Medicine Research Interest Group,}{University of Cincinnati}{Cincinnati, OH,}{May 8th.}{}{}
+
+\tldatecventry{2018}{Presentation, "Preliminary Results for Physician Clinical Hour Allocation Model,"}{University of Cincinnati Emergency Medicine Research Interest Group,}{Cincinnati, OH,}{May 2nd.}{}{}
+
+\tldatecventry{2018}{Presentation, "Balancing Equity and Equality in Time Allocation,"}{Emergency Medicine Research Interest Group,}{University of Cincinnati}{Cincinnati, OH,}{April 10th.}{}{}
+
+\tldatecventry{2018}{Poster, "Allocating Clinical Capacity Across Multiple Hospital Locations to Maximize Staff Satisfaction,"}{Graduate Student Poster Expo,}{University of Cincinnati}{Cincinnati, OH,}{February 15th.}{}
+
+\tldatecventry{2017}{Presentation, "Preliminary Results for University of Cincinnati Health Patient Transport System,"}{Emergency Medicine Research Interest Group,}{University of Cincinnati}{Cincinnati, OH,}{May 3rd.}{}{}
+
+\tldatecventry{2017}{Presentation,"University of Cincinnati Health Patient Transport System Simulation,"}{Emergency Medicine Research Interest Group,}{Cincinnati, OH,}{University of Cincinnati}{March 8th.}{}
+
+\tldatecventry{2015}{Masters Thesis Defense,"Can a CUSP Catastrophe Model Describe the US Economy?,"}{Department of Mathematics}{Clemson University}{Clemson, SC,}{April 23rd.}{}
+
+\tldatecventry{2014}{Presentation,"Dictionary Learning via Alternating Projection,"}{Zentrum f\"ur Technomathematik}{Universit\"{a}t Bremen,}{Bremen, Germany,}{July 7th.}{}
+
+\tldatecventry{2012}{"The Effect of Climate Change and Climate Change Policy on Ohio’s Economy,"}{Wittenberg University Honors Thesis Defense,}{Springfield, OH,}{April 21st.}{}{}
+%
+%%\tltextstart[south east]{\scriptsize\small}
+\tldatecventry{2010}{"Tracking Student Improvement for On-the-Rise,"}{Center for Civic and Urban Engagement Internship Presentation,}{Springfield, OH,}{August.}{}{}
+
+\smallskip
+\section{RESEARCH APPOINTMENTS}
+\smallskip
+	\tltextstart[south]{\scriptsize\small}
+	\tllabelcventry{2016}{0}{2016-Present}{Doctoral Researcher,}{Departments of Emergency Medicine \& Operations, Business Analytics, and Information Systems,}{University of Cincinnati,}{Chairs: Arthur Pancioli, MD \& Craig Froehle, PhD}{}
+	
+	\tldatecventry{2016}{Consultant,}{GE Aviation,}{"Optimal Inventory Segmentation and Fixed Day Supply,"}{Supervisor: Uday Rao, PhD}{}
+	
+	\tldatecventry{2015}{Research Assistant,}{Operations, Business Analytics, and Information Systems,}{University of Cincinnati,}{"Identifying the Structure of the Bitcoin Community on Twitter Using a Stochastic Block Model,"}{Supervisors: Yichen Qin, PhD \& Zhe Shan PhD}
+	
+	\tldatecventry{2014}{Research Assistant,}{Zentrum f\"ur Technomathematik}{Universit\"{a}t Bremen,}{"Dictionary Learning via Alternating Projection,"}{Supervisor: Emily Kang, PhD}{}
+
+\smallskip
+\section{TEACHING EXPERIENCE}
+\smallskip
+	\subsection{University of Cincinnati}
+		\cvitemwithcomment{Instructor}{Introduction to Business Analytics}{(Summer 2019)}
+		\cvitemwithcomment{Co-Instructor}{Services Management}{(Fall 2018)}
+		\cvitemwithcomment{TA}{Statistical Methods}{(Fall 2015)}
+		\cvitemwithcomment{TA}{Statistical Models}{(Spring 2016)}
+\medskip
+	\subsection{Clemson University}
+		\cvitemwithcomment{Instructor}{Introduction to Mathematical Analysis}{(Fall 2014, Spring 2015)}
+		\cvitemwithcomment{TA}{Precalculus Laboratory}{(Fall 2013, Spring 2014)}
+\medskip
+	\subsection{Wittenberg University}
+		\cvitemwithcomment{Co-Instructor}{Essential of Calculus}{(Spring 2010, Fall 2011)}
+\medskip
+	\subsection{Saint Martin DePorres High School}
+		\cvitemwithcomment{Co-Instructor}{Algebra 1}{(2012-2013)}
+	\subsection{Certifications}
+	\cvitemwithcomment{}{Ohio-Non Tax Teaching Certificate}{}		
+\smallskip
+\section{WORK EXPERIENCE}
+\tltextstart[base]{\scriptsize\small}
+\tltextend[base]{\scriptsize\small}
+\smallskip
+%	\tldatelabelcventry{2013}{2012--2013}{Apprentice Teacher,}{Saint Martin DePorres High School,}{Cleveland, OH}{}{}
+	\tldatelabelcventry{2013}{2012-2013}{Apprentice Teacher,}{Saint Martin DePorres High School,}{Cleveland, OH}{}{}{}
+
+
+\tltextstart[south west]{\scriptsize\small}
+	\tldatelabelcventry{2010}{2010}{Strengthening After Schools Program Summer Intern,}{Center for Civic and Urban Engagement,}{Springfield, OH}{}{}
+	
+	\tldatelabelcventry{2009}{2009}{Freedom School Servant Leader Intern,}{Children's Defense Fund,}{Cleveland, OH}{}{}
+
+\section{PROFESSIONAL SERVICE}
+\smallskip
+\tldatecventry{2020}{Conference Paper Reviewer,}{Decision Sciences Institute Annual Meeting}{}{}{}{}
+\tldatecventry{2020}{Organizer,}{OBAIS PhD Student Research Seminar,}{University of Cincinnati,}{Lindner College of Business}{}{}
+\tldatecventry{2019}{Session Chair,}{"Managing Uncertain Patient Demand,"}{INFORMS Healthcare,}{Boston, MA,}{July 29th.}{}
+\tldatecventry{2019}{Session Chair,}{"Implementing Data Driven Technology,"}{INFORMS Healthcare,}{Boston, MA,}{July 27th.}{}
+\tldatecventry{2019}{Session Chair,}{"Human-Centric Healthcare Operations,"}{POMS Annual Meeting,}{Washington, DC,}{May 4th.}{}
+\tldatecventry{2019}{Session Chair,}{"Data-Driven Decision-Making,"}{POMS Annual Meeting,}{Washington, DC,}{May 4th.}{}
+\tldatecventry{2019}{Mentor,}{"Grad-Undergrad Research Connections Program"}{University of Cincinnati,}{Cincinnati, OH,}{}{}
+\smallskip
+\section{HONORS \& MEMBERSHIPS}
+\smallskip
+\tlsince{Since~}
+
+\subsection{Professional Societies}
+\tlsetnotshadedfraction{0.7} 	
+
+\tltextstart[south east]{\scriptsize\small}
+ 		\tlcventry{2019}{0}{Manufacturing and Service Operations Management }{}{}{}{}
+ 		\tlcventry{2019}{0}{Decision Science Institute}{}{}{}{}
+ 		\tlcventry{2017}{0}{Institute for Operations Research and the Management Sciences}{}{}{}{}
+ 		\tlcventry{2017}{0}{Production and Operations Management Society}{}{}{}{}
+ \tltextstart[base]{\scriptsize\small}
+ 		\tlcventry{2013}{0}{Society for Industrial and Applied Mathematics}{}{}{}{}
+\medskip
+ 	\subsection{Awards and Honors Societies}
+		\tldatecventry{2016}{Omega Rho, University of Cincinnati}{}{}{}{}{} 		
+ 		\tldatecventry{2012}{Mortar Board, Wittenberg University}{}{}{}{} 
+ 		\tldatecventry{2012}{Phi Beta Kappa, Wittenberg University}{}{}{}{} 
+ 		\tldatecventry{2012}{Departmental Honors in Economics, Wittenberg University}{}{}{}{} 
+ 		\tldatecventry{2012}{University Honors, Wittenberg University}{}{}{}{} 
+ 		\tldatecventry{2012}{Phi Eta Sigma, Wittenberg University}{}{}{}{} 
+ 		
+\section{SOFTWARE SKILLS}
+		\cvitem{}{R, ARENA, Latex, Excel, Open Solver, Matlab, Python, GAMS, Minitab, AnyLogic, SAS}
+
+%\section{CERTIFICATIONS}
+%		\cvitemwithcomment{}{Ohio-Non Tax Teaching Certificate}{}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.

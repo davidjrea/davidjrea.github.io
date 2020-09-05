@@ -41,10 +41,10 @@ $(document).ready(function() {
         $("#read-more").fadeToggle("fast");
 
         // Change the button
-        if ($("#badge-more").text() == "more") {
-           $("#badge-more").text("less");
+        if ($("#badge-more").text() == "hide") {
+           $("#badge-more").text("Papers Available Upon Request");
         } else {
-           $("#badge-more").text("more");
+           $("#badge-more").text("hide");
         }
 
      });
