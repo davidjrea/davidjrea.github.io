@@ -12,6 +12,9 @@
 %https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_2)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% NOTE: USE PDFLATEX TO COMPILE. 
+% KNOWN ERROR WITH XELATEx
+
 %\documentclass[12pt, a4paper, sans]{moderncv}
 \documentclass[12pt, letter]{moderncv}
 
@@ -28,7 +31,7 @@
 \usepackage{pdfpages/pdfpages}
 \usepackage{moderntimeline/moderntimeline}
 %%%%%%%%%%% REFERENE FOR MODERNTIMELINE 
-\tlmaxdates{2009}{2022}     
+\tlmaxdates{2009}{2023}     
 %\tltext{\scriptsize\normalsize}
 \tltext{\scriptsize\small}
 \tltextend[west]{\scriptsize\small}
@@ -120,7 +123,18 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 %\simpleHeader{\href{https://davidjrea.github.io}{David Rea}}{\emaillink{readj@mail.uc.edu}}{216-894-0434}{\url{https://davidjrea.github.io}}{3493 Brookline Ave., Apt 3, Cincinnati, OH 45220}
-\simpleHeader{\href{https://davidjrea.github.io}{David Rea}}{\emaillink{dar421@lehigh.edu}}{\url{https://davidjrea.github.io}}
+\simpleHeader{\href{https://davidjrea.github.io}{David Rea, Ph.D.}}{\emaillink{dar421@lehigh.edu}}{\url{https://davidjrea.github.io}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ACADEMIC APPOINTMENTS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\tlcventry{2021}{0}{Lehigh University}{\newline  Assistant Professor,}
+%{ \href{https://business.lehigh.edu/directory/david-rea}{Dept. of Decision and Technology Analytics,}}{College of Business (primary)}{\newline   Affiliated Faculty, College of Health}{}
+\tlcventry{2021}{0}{Lehigh University}{}{}{}{}{}
+\begin{itemize}
+\item \href{https://business.lehigh.edu/directory/david-rea}{Assistant Professor, Dept. of Decision and Technology Analytics, College of Business (primary appointment)}
+\item  Affiliated Faculty, College of Health
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{EDUCATION}
@@ -132,8 +146,8 @@
 
 %\cvitemwithcomment{}{}{}
 %\tldatelabelcventry{2021}{$^*2021$\hspace{1mm} }{PhD, Business Administration,}{University of Cincinnati \newline}
-\tldatecventry{2021}{PhD, Business Administration,}{University of Cincinnati \newline}
-{\hspace*{.35in} \href{https://business.uc.edu/faculty-and-research/departments/obais.html}{Dept: Operations, Business Analytics, \& Information Systems}}{\newline \hspace*{.35in} Expected Graduation: May 2021}{}{}
+\tldatecventry{2021}{Ph.D., Business Administration,}{University of Cincinnati \newline}
+{\hspace*{.35in} \href{https://business.uc.edu/faculty-and-research/departments/obais.html}{Dept: Operations, Business Analytics, \& Information Systems}}{}{}{}
 
 
 \tldatecventry{2015}{MS, }{Mathematical Sciences,}{Clemson University \newline}
@@ -161,30 +175,36 @@ Motivated by organizational partnerships, I have primarily focused on problems i
 \section{PUBLICATIONS \& WORKING PAPERS}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \smallskip
-\subsection{Accepted \& Under Review}
+\subsection{Published}
 \smallskip
 \textbf{Rea, David}, Craig Froehle, Suzanne Masterson, Brian Stettler, Greg Fermann, Arthur Pancioli, "Unequal but Fair: Incorporating Distributive Justice in Operational Allocation Models," \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/poms.13369},\newline
 \textit{In Press at Production and Operations Management}
-\medskip\\ 
-\textbf{Rea, David}, Leonardo Lozano, Craig Froehle,  "Algorithmic Justice: Fair Compensation through Principled Compromises," \textit{Under Review at Production and Operations Management}
-\medskip\\
+\smallskip
+\subsection{Accepted \& Under Review}
+\medskip
 Dixon, Mike, \textbf{David Rea}, Liana Victorino, Craig Froehle, "Perceived Justice and Fairness in Managing Waiting Lines," Book Chapter, Set to be published in \textit{Research Handbook on Services Management}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Manuscripts in Preparation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Green, Brittany, \textbf{David Rea}, Charles Hoffman, Chia-Chun Yang, Craig Froehle, Andrew Beck, Carely Riley, "Localized Forecasts of the Childhood Meal Gap", \textit{Target: JAIS Special Issue on Data Science for Social Good}
-\medskip \\
+\smallskip
+\textbf{Rea, David}, Leonardo Lozano, Craig Froehle,  "Algorithmic Justice: Fair Compensation through Principled Compromises" \textit{}
+\medskip\\
+\textbf{Rea, David}, "Before They Wait: Forecasting and Accommodating Demand Uncertainty in the Emergency Department," \textit{Target: Journal of Operations Management}
+\medskip\\
+%Green, Brittany, \textbf{David Rea}, Charles Hoffman, Chia-Chun Yang, Craig Froehle, Andrew Beck, Carely Riley, "Localized Forecasts of the Childhood Meal Gap", \textit{Target: JAIS Special Issue on Data Science for Social Good}
+%\medskip \\
 %
 \textbf{Rea, David}, Craig Froehle, "Real-time Analytics for On-demand Services: A Literature Review and Framework," \textit{Target: Manufacturing \& Service Operations Management.}
+\medskip \\
+Bennett Lane, \textbf{Rea, David}, Craig Froehle, "Association of geographic distance and hospital characteristics with use of interhospital transfer by air", \textit{Target: Society for Academic Emergency Medicine} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ongoing Research}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textbf{Rea, David}, Craig Froehle, "Before They Wait: Forecasting and Accommodating Demand Uncertainty in the Emergency Department," \textit{Dissertation Research}
-\medskip \\
+
 \textbf{Rea, David}, Brittany Green, Charles Hoffman, Craig Froehle, Andrew Beck, Carely Riley,: "Injection and Redistribution: Coordinating Efforts to Close the Hunger Gap", \textit{Food Insecurity Working Group}
-\medskip \\
-\textbf{Rea, David}, Rachel Ancona, Chet Zalesky, Curry Woods, Bob Doerning, Caroline Freiermuth, "Where are the overdoses? The effect of COVID-19 on Opioid Presentations in the ED"
+%\medskip \\
+%\textbf{Rea, David}, Rachel Ancona, Chet Zalesky, Curry Woods, Bob Doerning, Caroline Freiermuth, "Where are the overdoses? The effect of COVID-19 on Opioid Presentations in the ED"
 \medskip \\
  Mike Lyons, \textbf{Rea, David}, Parastu Kasaie, Mike Ward, Rachel Ancova, David Kelton, "The Opportunity Costs of HIV Screening in the Emergency Department" 
 
