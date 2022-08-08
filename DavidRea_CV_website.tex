@@ -16,9 +16,9 @@
 % KNOWN ERROR WITH XELATEx
 
 %\documentclass[12pt, a4paper, sans]{moderncv}
-\documentclass[12pt, letter]{moderncv}
-
+\RequirePackage[hyphens]{url} % to avoid long urls being cutoff  -> https://tex.stackexchange.com/questions/3033/forcing-linebreaks-in-url
 % moderncv themes
+\documentclass[12pt, letter]{moderncv}
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
@@ -31,7 +31,7 @@
 \usepackage{pdfpages/pdfpages}
 \usepackage{moderntimeline/moderntimeline}
 %%%%%%%%%%% REFERENE FOR MODERNTIMELINE 
-\tlmaxdates{2009}{2025}     
+\tlmaxdates{2009}{2024}     
 %\tltext{\scriptsize\normalsize}
 \tltext{\scriptsize\small}
 \tltextend[west]{\scriptsize\small}
@@ -172,16 +172,18 @@ Motivated by organizational partnerships, I have primarily focused on problems i
 \section{PUBLICATIONS \& WORKING PAPERS}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \smallskip
-\subsection{Published \& In Press}
+\subsection{Published}
 \smallskip
-\textbf{Rea, David}, Craig Froehle, Suzanne Masterson, Brian Stettler, Greg Fermann, Arthur Pancioli, ``Unequal but Fair: Incorporating Distributive Justice in Operational Allocation Models," \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/poms.13369},\newline
-\textit{Published at Production and Operations Management}\\
+\textbf{Rea, David}, Craig Froehle, Suzanne Masterson, Brian Stettler, Greg Fermann, Arthur Pancioli, ``Unequal but Fair: Incorporating Distributive Justice in Operational Allocation Models," \textit{ Production and Operations Management}, 30(7), 2304-2320.  \newline \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/poms.13369}\\
 
 \medskip
-Dixon, Mike, \textbf{David Rea}, Liana Victorino, Craig Froehle, ``Perceived Justice and Fairness in Managing Waiting Lines," Book Chapter, \newline In press as part of \textit{Research Handbook on Services Management}
+
+Dixon, Mike, \textbf{David Rea}, Liana Victorino, Craig Froehle, ``Perceived Justice and Fairness in Managing Waiting Lines," \textit{Research Handbook on Services Management}, edited by Mark Davis, Edward Elgar Publishing, 2022, pp. 117-128.
+\newline \url{https://www.e-elgar.com/shop/usd/research-handbook-on-services-management-9781800375642.html}.
 
 %\subsection{Accepted \& Under Review}
 
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Manuscripts in Preparation \& Under Review}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,8 +209,8 @@ Lane, Bennett, \textbf{David Rea}, Adam Gottula, Andrew Cathers, Ryan Ziegler,  
 \medskip \\
  Mike Lyons, \textbf{Rea, David}, Parastu Kasaie, Mike Ward, Rachel Ancova, David Kelton, ``The Opportunity Costs of HIV Screening in the Emergency Department" 
 \medskip \\
-\textbf{Rea, David}, Saif Mir, Zach Zacharia, ``What kind of fairness do supply managers prefer?" 
-\\
+\textbf{Rea, David}, Saif Mir, Zach Zacharia, ``What kind of fairness do supply managers prefer?" \smallskip
+
 \textbf{Rea, David}, Craig Froehle, ``Values-Centric Operations: Moving our Field Beyond Mere Efficiency " 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ACADEMIC SPEAKING}
@@ -259,7 +261,7 @@ Lane, Bennett, \textbf{David Rea}, Adam Gottula, Andrew Cathers, Ryan Ziegler,  
 \tldatecventry{2017}{\textbf{Rea, David}, Craig Froehle, Elizabeth Powell}{``Optimal Staffing, Scheduling and Dispatch Policies for Emergency Transport Services"}{POMS Annual Meeting,}{Seattle, WA,}{May 7th.}
  
 
-\smallskip
+\newpage
 \subsection{Media \& Other Speaking Engagements }
 \smallskip
 \tldatecventry{2021}{Podcast, ``Healthcare, Food and Fairness"}{ilLUminate Podcast,Lehigh University Business Blog}{Bethlehem, PA}{December 1st.}{\newline 
@@ -317,8 +319,8 @@ Lane, Bennett, \textbf{David Rea}, Adam Gottula, Andrew Cathers, Ryan Ziegler,  
 		\cvitemwithcomment{TA}{Statistical Models}{(Spring 2016)}
 \medskip
 	\subsection{Clemson University}
-		\cvitemwithcomment{Instructor}{Introduction to Mathematical Analysis}{(Fall 2014, 2x Spring 2015)}
-		\cvitemwithcomment{TA}{Precalculus Laboratory}{(Fall 2013, Spring 2014)}
+		\cvitemwithcomment{Instructor}{Introduction to Mathematical Analysis}{(Fall 2014, Spring 2015 ($\times 2$))}
+		\cvitemwithcomment{TA}{Precalculus Laboratory}{(Fall 2013, Spring 2014($\times 2$))}
 \medskip
 	\subsection{Wittenberg University}
 		\cvitemwithcomment{Co-Instructor}{Essential of Calculus}{(Spring 2010, Fall 2011)}
@@ -333,7 +335,7 @@ Lane, Bennett, \textbf{David Rea}, Adam Gottula, Andrew Cathers, Ryan Ziegler,  
 \section{SERVICE}
 \subsection{Professional Service}
 \medskip
-\tldatecventry{2022}{Ad-hoc reviewer:}{International Journal of Production and Operations Management, Annals of Operations Research, Health Care Management Science, POMS College of Behavioral Operations Management 'Junior Scholar' Competition}{}{}{}
+\tldatecventry{2022}{Ad-hoc reviewer:}{International Journal of Production and Operations Management, Annals of Operations Research, Health Care Management Science ($\times$2), POMS College of Behavioral Operations Management 'Junior Scholar' Competition}{}{}{}
 \tldatecventry{2022}{Session Organizer \& Chair,}{``Designing Patient-Centric Systems (1)",}{Production and Operations Management Society 2022 Annual Conference}{}{}
 \tldatecventry{2022}{Session Organizer \& Chair,}{``Designing Patient-Centric Systems (2)",}{Production and Operations Management Society 2022 Annual Conference}{}{}
 \tldatecventry{2022}{Session Organizer \& Chair,}{``Designing Fair Service Systems (1)",}{Production and Operations Management Society 2022 Annual Conference}{}{}
@@ -347,10 +349,11 @@ Lane, Bennett, \textbf{David Rea}, Adam Gottula, Andrew Cathers, Ryan Ziegler,  
 \tldatecventry{2019}{Mentor,}{``Grad-Undergrad Research Connections Program"}{University of Cincinnati,}{Cincinnati, OH,}{}{}
 \smallskip
 \subsection{Institutional Service}
-\tldatecventry{2022}{Lehigh College of Health Strategy Conference}{Faculty Participant}{}{}{}
-\tldatecventry{2022}{Lehigh Accounting Faculty Search Committee}{External  Member }{}{}{}{}
-\tldatecventry{2021}{Lehigh DATA Department Faculty Search}{Deparmental Member}{}{}{}{}
-\tlcventry{2021}{0}{Lehigh Center for Supply Chain Research}{Faculty Support Member}{}{}{}
+\tldatecventry{2022}{Lehigh New Faculty Orientation,}{\textit{Faculty Panel Member}}{}{}{}
+\tldatecventry{2022}{Lehigh College of Health Strategy Conference,}{\textit{Invited External Faculty}}{}{}{}
+\tldatecventry{2022}{Lehigh Accounting Faculty Search Committee,}{\textit{External Member}}{}{}{}{}
+\tldatecventry{2021}{Lehigh DATA Department Faculty Search,}{\textit{Departmental Member}}{}{}{}{}
+\tlcventry{2021}{0}{Lehigh Center for Supply Chain Research,}{\textit{Faculty Support Member}}{}{}{}
 \smallskip
 \section{HONORS \& MEMBERSHIPS}
 \smallskip
